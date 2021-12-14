@@ -7,9 +7,8 @@ import LatestReleases from "./components/Latest-release";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       <MyNavbar />
-
       <Welcome />
       <LatestReleases />
       <Footer />

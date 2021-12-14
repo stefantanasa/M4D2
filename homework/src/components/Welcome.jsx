@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import { Jumbotron, Button, Container} from 'react-bootstrap'
+import { Jumbotron, Button , Container} from 'react-bootstrap'
 
 class Welcome extends Component{
     state = {}
@@ -8,23 +8,21 @@ class Welcome extends Component{
     
     render(){
         return(
-            <div>
-                          
-
-                          <Jumbotron>
-      <h1>Welcome to the Strive Library</h1>
-     
-  
-      <p>
-        <Button variant="primary">
-         Enter... or Not :)
-        </Button>
-      </p>
-    </Jumbotron>
+    <Container>
+                
+      <Jumbotron>
+        <h1>Welcome to the Strive Library</h1>
+      
+        <p>
+          <Button variant="primary">
+          Enter... or Not :)
+          </Button>
+        </p>
+      </Jumbotron>
     
+      
 
-
-            </div>
+  </Container>
             )
         }
     }

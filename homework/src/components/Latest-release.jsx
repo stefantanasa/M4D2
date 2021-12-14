@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import books from "../horror.json"
-import {Card, Button, Container} from 'react-bootstrap'
+import {Card, Button, Row, Container } from 'react-bootstrap'
 
 class LatestReleases extends Component{
     state = {}
@@ -8,26 +8,29 @@ class LatestReleases extends Component{
     
     render(){
         return(
-            <div class="container">
-              <div class="row">
-             {
-               books.map(book =>(
-                 
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={book.img} />
-  <Card.Body>
-    <Card.Title>{book.title}</Card.Title>
-    <Card.Text>
-      {book.category,book.price}
-    </Card.Text>
-    <Button variant="primary">Buy it for ${book.price}</Button>
-  </Card.Body>
-</Card>
+          <Container>
+          <Row >
+            <h1>
+              Latest Released
+            </h1>
+          </Row>
+          <Row className="justify-content-between">
+              {books.map(book => (
 
-               ))
-             }
-  </div>
-            </div>
+              <Card className= "bg-light my-2" key={book.asin} style={{ width: '14rem'} }>
+                  <Card.Img variant="top" style= { {height: `18rem`, overflow: `hidden`, fit: `contain`}} src={book.img} />
+                  <Card.Body>
+                    <Card.Title>{book.title}</Card.Title>
+                    <Button variant="warning">${book.price}</Button>
+                    <Button  variant="danger">Buy it now </Button>
+                  </Card.Body>
+                </Card>
+
+              ))}
+
+            </Row>
+            
+            </Container>
             )
         }
     }
